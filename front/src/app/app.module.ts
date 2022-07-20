@@ -4,6 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 // Llamadas a APIs
 import { HttpClientModule } from '@angular/common/http';
 
+//import ReactiveForm para que funcionen los formularios 
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
@@ -13,6 +16,7 @@ import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { BuscarComponent } from './pages/buscar/buscar.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +27,15 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     NosotrosComponent,
     ContactoComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    BuscarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
